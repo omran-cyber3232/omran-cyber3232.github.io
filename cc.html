@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <style>
+	
+        /* Basic styling for the form */
+        body {
+	
+            font-family: 'Roboto', sans-serif;
+            background-color:  #92a8d1;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-top: 40px;
+            font-weight: 700;
+        }
+		  .button-container a:hover {
+            background-color: #F0FFFF;
+        }
+
+        /* Circular list styles */
+        .circular-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+  .button-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .button-container a {
+            display: inline-block;
+            background-color:#A9A9A9;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .button-container a:hover {
+            background-color: #F0FFFF;
+        }
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            background-color:#F5F5DC;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+            font-weight: 500;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+            color: #555;
+        }
+        textarea {
+            height: 150px;
+        }
+        input[type="submit"] {
+            background-color: #6C63FF;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        input[type="submit"]:hover {
+            background-color: #5247D8;
+        }
+    </style>
+</head>
+<body>
+ <div class="container">
+        <div class="button-container">
+            <a href="index.html">home</a>
+            <a href="cc.html">Contact me Page</a>
+        </div>
+
+    <h2>Contact Me</h2>
+    <form action="process_form.php" method="POST">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="country">Country</label>
+        <input type="text" id="country" name="country" required>
+
+        <label for="comments">Comments</label>
+        <textarea id="comments" name="comments" required></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
